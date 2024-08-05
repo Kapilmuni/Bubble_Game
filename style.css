@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(134, 173, 134);
+}
+#panel {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+}
+#ptop {
+    display: flex;
+    color: white;
+    padding: 0 10%;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(92, 142, 92);
+}
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.box1 {
+    font-size: 20px;
+}
+.box2 {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(17, 109, 39);
+    font-weight: 700;
+    font-size: 20px;
+}
+#rulesButton {
+    text-decoration: none;
+    color: rgb(17, 109, 39);
+    font-weight: 700;
+    font-size: 20px;
+}
+#pbtm {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(117, 9, 160);
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100% - 100px);
+    gap: 10px;
+}
+.bubble {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(52, 185, 40);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.bubble:hover {
+    cursor: pointer;
+    background-color: rgb(17, 109, 39);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #panel {
+        width: 90%;
+        height: 90%;
+    }
+    #ptop {
+        padding: 0 5%;
+    }
+}
+@media (max-width: 992px) {
+    #panel {
+        width: 95%;
+        height: 95%;
+    }
+    #ptop {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .elem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .box1, .box2, #rulesButton {
+        font-size: 16px;
+    }
+    .box2 {
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 576px) {
+    .box1, .box2, #rulesButton {
+        font-size: 14px;
+    }
+    .box2 {
+        padding: 6px 12px;
+    }
+    .bubble {
+        width: 30px;
+        height: 30px;
+    }
+}
